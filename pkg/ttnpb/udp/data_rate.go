@@ -67,8 +67,8 @@ func (d *DataRate) UnmarshalJSON(data []byte) error {
 
 var (
 	errDataRate = errors.DefineInvalidArgument("data_rate", "invalid data rate")
-	sfRegexp    = regexp.MustCompile("^SF(6|7|8|9|10|11|12)")
-	drRegexp    = regexp.MustCompile("BW(125|250|500)$")
+	sfRegexp    = regexp.MustCompile("^SF(5|6|7|8|9|10|11|12)")
+	drRegexp    = regexp.MustCompile("BW(\\d{2,3})$")
 )
 
 // String implements the Stringer interface.
